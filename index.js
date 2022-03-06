@@ -1,11 +1,11 @@
 // index.js main JS file for teamprofilegen MyTeam app
 const inquirer = require('inquirer');
 const fs = require('fs');
+const path = require('path');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-
-// need to add helper functions to dist template-literal HTML
+const generateHTML = require('./src/generateHTML');
 
 const MyTeam = [];
 
@@ -50,19 +50,19 @@ function addToTeam() {
   [
    { 
     type: 'list',
-    name: 'what-role',
+    name: 'role',
     message: 'Add an engineer or an intern to the team?:',
-    choices: ['Engineer', 'Intern', 'return to menu']
+    choices: ['Engineer', 'Intern', 'finish building MyTeam']
    }]).then(data => {
-    if (data.what-role === 'Engineer') {
+    if (data.role === 'Engineer') {
      engineerInput();
     } else if 
-    (data.what-role === 'Intern') {
+    (data.role === 'Intern') {
      internInput();
     } else {
-     writeFile();
-    }
-  })
+      writeFile();
+    }  
+  });
 }
 
 function engineerInput() {
@@ -128,9 +128,17 @@ function engineerInput() {
   };
 
 function writeFile() {
- fs.writeFileSync(outputPath, render(MyTeam), 'UTF-8');
+  const outputDirectory = path.resolve(__dirname, "output");
+  if (!fs.existsSync(outputDirectory)) {
+    fs.mkdirSync(outputDirectory);
+  }
+  fs.writeFileSync(path.join(outputDirectory, "index.html"), generateHTML(MyTeam), function(err) {
+   if (err) return console.log(err);
+   console.log(MyTeam);
+ });
 }
-
 // start invoked at end of js file
-
+// start invoked with node index.js on terminal
 start();
+ 
+// MyTeam
