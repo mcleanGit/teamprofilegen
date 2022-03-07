@@ -4,9 +4,13 @@
 
 ## Description
 The challenge involves building a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person. Because testing is key to making the code maintainable, unit tests are provided for each part of the code.
+These are currently limited tests for the four employee types -- employee, manager, engineer, intern -- using Jest.
 
-As this application is not deployed, a walkthrough video is provided. A link to the video is found below and is added to this README.c
-The challege User Story and Acceptance Criteria are shown in the following sections.
+As this application is not deployed, a walkthrough video is provided. A link to the video is found below and is added to this README.
+Note: I have been unable to resolve a problem connecting the index.js at writeFile to generate the HTML. Will require more time. Attempted to make the connection through generateHTML helper file, but there are still some issues to resovle.
+
+
+The challege User Story and Acceptance Criteria of the original assignment are shown in the following sections.
 
 ## User Story
 AS A manager
@@ -113,9 +117,22 @@ The following components are submitted for review:
 
 * A walkthrough video demonstrating the functionality of the application and passing tests.
 
+video link:
+
+screen shots:
+These provide a mock-up of the deployed HTML, and the passing Jest test results for the four Employee types, collectively and individually.
+
+<img src="https://user-images.githubusercontent.com/94858165/156959463-c81321d9-d918-44e9-a0b4-1a6e4bdb46b8.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/94858165/156959495-6f4c463c-5db6-4ef8-a592-affd3a6c653a.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/94858165/156959518-215ff4a9-7a5d-4bcb-b72c-2ad80bc0cfde.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/94858165/156959537-59bfa166-4631-43e5-9296-81e45c3b3151.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/94858165/156959548-19c36f56-2b64-4a61-9d57-6b7fbac4c403.png" width="30%"></img> <img src="https://user-images.githubusercontent.com/94858165/156959561-97d71482-be9d-433f-a08c-4364f7ef8693.png" width="30%"></img> 
+
+
+
 * A sample HTML file generated using your application.
 
-* The URL of the GitHub repository. To follow:  Repository name -- MyTeam -- and include extended version of this README describing the project.
+[MyTeam-teamprofilegen.html] https://github.com/mcleanGit/teamprofilegen/blob/main/output/index.html)
+
+* The URL of the GitHub repository.
+[MyTeam-teamprofilegen github repo] (https://github.com/mcleanGit/teamprofilegen)
+
 
 - - -
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
