@@ -5,9 +5,10 @@ const path = require('path');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const generateHTML = require('./src/generateHTML');
+// const generateHTML = require('./src/generateHTML');
 
 const MyTeam = [];
+// const data = JSON.stringify(MyTeam);
 
 function start() {
  managerInput();
@@ -44,7 +45,7 @@ function managerInput() {
  })
 };
 
-// provide function to add members to team, continuing after manager with engineer and intern prompt inputs
+// provide function to add members to team, continuing after manager with engineer and intern prompt inputs //
 function addToTeam() {
  inquirer.prompt(
   [
@@ -127,18 +128,17 @@ function engineerInput() {
    })
   };
 
+
 function writeFile() {
   const outputDirectory = path.resolve(__dirname, "output");
   if (!fs.existsSync(outputDirectory)) {
     fs.mkdirSync(outputDirectory);
   }
-  fs.writeFileSync(path.join(outputDirectory, "index.html"), generateHTML(MyTeam), function(err) {
+  fs.writeFileSync(path.join(outputDirectory, "index.html"), generateHTML(data), function(err) {
    if (err) return console.log(err);
    console.log(MyTeam);
  });
 }
-// start invoked at end of js file
-// start invoked with node index.js on terminal
+
+// start invoked with node index.js on terminal'
 start();
- 
-// MyTeam
