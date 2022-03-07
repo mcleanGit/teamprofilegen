@@ -128,7 +128,6 @@ function engineerInput() {
    })
   };
 
-
 function writeFile() {
   const outputDirectory = path.resolve(__dirname, "output");
   if (!fs.existsSync(outputDirectory)) {
@@ -139,6 +138,10 @@ function writeFile() {
    console.log(MyTeam);
  });
 }
+// note: an alternative method might be to use the HTML section templates
+// the path would then be: fs.WriteFilesSync(path.join(templatesDir, "manager.html" etc.))
+// but I have not had enough time to capture the data input that goes into the various placeholders in the HTML subfiles
+// there are, in any case, numerous additonal steps to realize this approach using a form of generateHTML
 
 // start invoked with node index.js on terminal'
 start();
