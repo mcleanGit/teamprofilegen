@@ -134,7 +134,7 @@ function writeFile() {
   if (!fs.existsSync(outputDirectory)) {
     fs.mkdirSync(outputDirectory);
   }
-  fs.writeFileSync(path.join(outputDirectory, "index.html"), generateHTML(data), function(err) {
+  fs.writeFileSync(path.join(outputDirectory, "index.html"), generateHTML(stringify.data), function(err) {
    if (err) return console.log(err);
    console.log(MyTeam);
  });
