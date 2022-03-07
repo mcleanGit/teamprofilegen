@@ -7,7 +7,7 @@ The challenge involves building a Node.js command-line application that takes in
 These are currently limited tests for the four employee types -- employee, manager, engineer, intern -- using Jest.
 
 As this application is not deployed, a walkthrough video is provided. A link to the video is found below and is added to this README.
-Note: I have been unable to resolve a problem connecting the index.js at writeFile to generate the HTML. Will require more time. Attempted to make the connection through generateHTML helper file, but there are still some issues to resovle.
+Note: I have been unable to resolve a problem connecting the index.js at writeFile to generate the HTML. Will require more time. Attempted to make the connection through generateHTML helper file, but there are still some issues to resolve.
 
 
 The challege User Story and Acceptance Criteria of the original assignment are shown in the following sections.
@@ -56,7 +56,7 @@ The directory structure for the project is as follows:
 │   ├── Engineer.test.js
 │   ├── Intern.test.js
 │   └── Manager.test.js
-├── dist/                  // rendered output (HTML) and CSS style sheet
+├── dist/                  // rendered output (HTML) with inline CSS style
 ├── lib/                   // classes
 ├── src/                   // template helper code
 ├── .gitignore             // indicates which folders and files Git should ignore
@@ -117,7 +117,14 @@ The following components are submitted for review:
 
 * A walkthrough video demonstrating the functionality of the application and passing tests.
 
+Note: as the application still has some issues, the video walks through shows its functionality not fully realized.
+
+Tests note: I refactored the 4 employee types several times over the week, following the evolving options of Module 10, moving from constructor and function to prototypes and eventually classes. There were a number of failng and passing Jest tests along the way.  The final version here presents the four employee types as Classes and provides the passing functionality tests for their distinctive components (see screen shots, below).
+
 video link:
+https://vimeo.com/685317606/573fbf4428
+Sorry, this got a bit truncated at the end. 
+Should move Vimeo out of Chrome extension. Closing newly-opened windows can be risky, as the recording can cut out.
 
 screen shots:
 These provide a mock-up of the deployed HTML, and the passing Jest test results for the four Employee types, collectively and individually.
